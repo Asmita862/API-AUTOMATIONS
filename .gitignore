@@ -1,0 +1,51 @@
+# Node modules
+node_modules/
+
+# Test results and reports
+test-results/
+playwright-report/
+reports/
+
+# Auth tokens
+auth.json
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Playwright browsers
+.cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/*
+!.vscode/mcp.json
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output
+dist/
+build/
+
+# TypeScript
+*.tsbuildinfo
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Temporary files
+*.tmp
+*.temp
