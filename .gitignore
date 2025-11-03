@@ -6,8 +6,11 @@ test-results/
 playwright-report/
 reports/
 
-# Auth tokens
+# Auth tokens and admin data
 auth.json
+admin.json
+admin.chromium.json
+registered-admin.json
 
 # Environment variables
 .env

@@ -26,17 +26,31 @@ async function globalSetup() {
   const result = await response.json();
   console.log('Global setup response:', JSON.stringify(result, null, 2));
   const token = result.data?.login?.accessToken;
+  const admin = result.data?.login?.admin;
 
   if (!token) {
     console.error('Failed to get token. Response:', result);
     throw new Error('Failed to retrieve auth token during global setup.');
   }
 
-  // Save the token to a file
+  // Save the token to auth.json
   const authFile = path.join(__dirname, 'auth.json');
   fs.writeFileSync(authFile, JSON.stringify({ token }, null, 2));
 
-  console.log('Global auth token saved.');
+  // Save admin details to admin.json
+  if (admin) {
+    const adminFile = path.join(__dirname, 'admin.json');
+    const adminData = {
+      firstName: admin.firstName,
+      lastName: admin.lastName,
+      email: admin.email,
+      phone: admin.phone,
+    };
+    fs.writeFileSync(adminFile, JSON.stringify(adminData, null, 2));
+    console.log('Admin details saved to admin.json');
+  }
+
+  console.log('Global auth token saved to auth.json');
   await requestContext.dispose();
 }
 
