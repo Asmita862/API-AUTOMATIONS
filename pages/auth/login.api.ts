@@ -1,4 +1,6 @@
 import { BaseAPI } from '../base/base.api';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const LOGIN_MUTATION = `
   mutation ($input: LoginAdminDTO!) {

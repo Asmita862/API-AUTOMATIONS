@@ -51,5 +51,5 @@ ADMIN_PASSWORD={password}
 4. Run tests:
 
 ```bash
-npx playwright test
+npx playwright test {path to test}
 ```
