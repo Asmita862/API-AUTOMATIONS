@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:login": "npx playwright test test/auth/login.spec.ts",
     "test:reg": "npx playwright test test/auth/registration.spec.ts",
-     "test:removeAdmin": "npx playwright test test/auth/removeAdmin.spec.ts"
+    "test:removeAdmin": "npx playwright test test/auth/removeAdmin.spec.ts",
+    "test:adminlist": "npx playwright test tests/auth/adminlist.spec.ts"
   },
   "keywords": [],
   "author": "",
