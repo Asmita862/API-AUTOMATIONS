@@ -2,12 +2,22 @@
   "name": "api-automation",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test:login": "npx playwright test test/auth/login.spec.ts",
-    "test:reg": "npx playwright test test/auth/registration.spec.ts",
-    "test:removeAdmin": "npx playwright test test/auth/removeAdmin.spec.ts",
-    "test:adminlist": "npx playwright test tests/auth/adminlist.spec.ts"
+    "test:login": "npx playwright test tests/auth/login.spec.ts",
+    "test:reg": "npx playwright test tests/auth/registration.spec.ts",
+    "test:removeAdmin": "npx playwright test tests/auth/removeAdmin.spec.ts",
+    "test:adminlist": "npx playwright test tests/auth/adminlist.spec.ts",
+
+    "adminlist:search": "npx playwright test tests/auth/search.spec.ts",
+    "adminlist:pagination": "npx playwright test tests/auth/pagination.spec.ts",
+    "adminlist:sorting": "npx playwright test tests/auth/sorting.spec.ts",
+    "adminlist:orderby": "npx playwright test tests/auth/orderby.spec.ts",
+
+    "adminlist:all": "npx playwright test tests/auth"
   },
   "keywords": [],
   "author": "",
