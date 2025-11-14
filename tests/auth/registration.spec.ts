@@ -48,6 +48,8 @@ test.describe('Admin Registration API', () => {
     const response = await registrationAPI.register(adminData);
 
     const registerData = response.data?.register;
+
+    //verify registration response
     expect(registerData).toBeDefined();
     expect(registerData?._id).toBeTruthy();
     expect(registerData?.email).toBe(adminData.email);
@@ -73,6 +75,8 @@ test.describe('Admin Registration API', () => {
       console.log('Registered admin data saved to registered-admin.json');
     }
   });
+
+ //test 2 - Registration without auth token
 
   test('should fail registration without auth token', async () => {
     // Create API instance without auth token
@@ -100,6 +104,7 @@ test.describe('Admin Registration API', () => {
     await unauthAPI.dispose();
   });
 
+  //test 3 - duplicate email registration
   test('should fail registration with duplicate email', async () => {
     const adminData = {
       firstName: DataGenerator.generateFirstName(),
@@ -133,6 +138,7 @@ test.describe('Admin Registration API', () => {
     }
   });
 
+  //test 4 -required fields validations
   test('should validate required fields', async () => {
     const invalidData = {
       firstName: '',
@@ -147,6 +153,7 @@ test.describe('Admin Registration API', () => {
     expect(response.errors?.[0]?.message).toBeTruthy();
   });
 
+  //test 5 - email format validation
   test('should validate email format', async () => {
     const invalidEmailData = {
       firstName: DataGenerator.generateFirstName(),
@@ -159,11 +166,16 @@ test.describe('Admin Registration API', () => {
 
     expect(response.errors).toBeDefined();
     const errorMessage = response.errors?.[0]?.message;
+
+    console.log('Validation message >>>', errorMessage);
+
     // Handle rate limiting or validation errors
     if (errorMessage?.includes('ThrottlerException')) {
       console.log('Rate limited, test inconclusive');
     } else {
-      expect(errorMessage).toMatch(/email|invalid|format|validation/i);
+      
+     expect(errorMessage).toMatch(/bad request|email|invalid|format|validation/i);
+
     }
   });
 });

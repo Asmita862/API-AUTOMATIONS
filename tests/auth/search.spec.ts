@@ -13,7 +13,7 @@ test.describe('Admin List API - Search Scenarios', () => {
   // Environment variables
   const firstName = process.env.ADMIN_FIRSTNAME!;
   const lastName = process.env.ADMIN_LASTNAME!;
-  const partialEmail = process.env.ADMIN_EMAIL_PARTIAL!; // e.g., "asmita.aryal"
+  const partialEmail = process.env.ADMIN_EMAIL_PARTIAL!; 
 
   test.beforeAll(async () => {
     loginAPI = new LoginAPI();

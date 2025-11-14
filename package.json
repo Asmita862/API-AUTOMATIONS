@@ -17,7 +17,9 @@
     "adminlist:sorting": "npx playwright test tests/auth/sorting.spec.ts",
     "adminlist:orderby": "npx playwright test tests/auth/orderby.spec.ts",
 
-    "adminlist:all": "npx playwright test tests/auth"
+    "adminlist:all": "npx playwright test tests/auth",
+    "test:changepassword": "npx playwright test tests/auth/changepassword.spec.ts",
+    "test:userprofile": "npx playwright test tests/auth/userprofile.spec.ts"
   },
   "keywords": [],
   "author": "",
