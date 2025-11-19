@@ -2,8 +2,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import { test, expect } from '@playwright/test';
-import { LoginAPI } from '../../pages/auth/login.api';
-import { UserProfileAPI, UserProfile } from '../../pages/auth/userprofile.api';
+import { LoginAPI } from '../../../pages/auth/login.api';
+import { UserProfileAPI, UserProfile } from '../../../pages/auth/userprofile.api';
 
 // Simple email format validation
 const isValidEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);

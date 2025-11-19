@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { LoginAPI } from '../../pages/auth/login.api';
-import { AdminListAPI, GetAdminListInput, Admin } from '../../pages/auth/adminlist.api';
+import { LoginAPI } from '../../../pages/auth/login.api';
+import { AdminListAPI, GetAdminListInput, Admin } from '../../../pages/auth/adminlist.api';
 
 test.describe('Admin List API', () => {
   let loginAPI: LoginAPI;

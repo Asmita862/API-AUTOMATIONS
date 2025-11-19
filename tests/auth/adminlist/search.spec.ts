@@ -2,13 +2,14 @@ import dotenv from 'dotenv';
 dotenv.config(); // <-- load .env variables
 
 import { test, expect } from '@playwright/test';
-import { LoginAPI } from '../../pages/auth/login.api';
-import { AdminListAPI, GetAdminListInput } from '../../pages/auth/adminlist.api';
+import { LoginAPI } from '../../../pages/auth/login.api';
+import { AdminListAPI, GetAdminListInput } from '../../../pages/auth/adminlist.api';
 
 test.describe('Admin List API - Search Scenarios', () => {
   let loginAPI: LoginAPI;
   let adminListAPI: AdminListAPI;
   let authToken: string;
+  
 
   // Environment variables
   const firstName = process.env.ADMIN_FIRSTNAME!;

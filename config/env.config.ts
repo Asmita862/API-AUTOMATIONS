@@ -1,4 +1,5 @@
-import dotenv from 'dotenv';
+
+/*import dotenv from 'dotenv';
 
 // Load .env file
 dotenv.config();
@@ -25,3 +26,5 @@ export const config = {
     }
   }
 };
+
+*/

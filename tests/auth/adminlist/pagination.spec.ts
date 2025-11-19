@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { LoginAPI } from '../../pages/auth/login.api';
-import { AdminListAPI, GetAdminListInput } from '../../pages/auth/adminlist.api';
+import { LoginAPI } from '../../../pages/auth/login.api';
+import { AdminListAPI, GetAdminListInput } from '../../../pages/auth/adminlist.api';
 
 // Helper function to pause execution
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));

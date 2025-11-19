@@ -10,16 +10,17 @@
     "test:login": "npx playwright test tests/auth/login.spec.ts",
     "test:reg": "npx playwright test tests/auth/registration.spec.ts",
     "test:removeAdmin": "npx playwright test tests/auth/removeAdmin.spec.ts",
-    "test:adminlist": "npx playwright test tests/auth/adminlist.spec.ts",
+    "test:adminlist": "npx playwright test tests/auth/adminlist/adminlist.spec.ts",
 
-    "adminlist:search": "npx playwright test tests/auth/search.spec.ts",
-    "adminlist:pagination": "npx playwright test tests/auth/pagination.spec.ts",
-    "adminlist:sorting": "npx playwright test tests/auth/sorting.spec.ts",
-    "adminlist:orderby": "npx playwright test tests/auth/orderby.spec.ts",
+    "adminlist:search": "npx playwright test tests/auth/adminlist/search.spec.ts",
+    "adminlist:pagination": "npx playwright test tests/auth/adminlist/pagination.spec.ts",
+    "adminlist:sorting": "npx playwright test tests/auth/adminlist/sorting.spec.ts",
+    "adminlist:orderby": "npx playwright test tests/auth/adminlist/orderby.spec.ts",
 
     "adminlist:all": "npx playwright test tests/auth",
     "test:changepassword": "npx playwright test tests/auth/changepassword.spec.ts",
-    "test:userprofile": "npx playwright test tests/auth/userprofile.spec.ts"
+    "test:userprofile": "npx playwright test tests/auth/userprofile/userprofile.spec.ts",
+    "test:userid": "npx playwright test tests/auth/userprofile/userid.spec.ts"
   },
   "keywords": [],
   "author": "",

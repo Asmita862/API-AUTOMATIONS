@@ -2,8 +2,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import { test, expect } from '@playwright/test';
-import { LoginAPI } from '../../pages/auth/login.api';
-import { AdminListAPI, GetAdminListInput } from '../../pages/auth/adminlist.api';
+import { LoginAPI } from '../../../pages/auth/login.api';
+import { AdminListAPI, GetAdminListInput } from '../../../pages/auth/adminlist.api';
 
 // Utility function to wait for a few seconds
 const wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));

@@ -1,15 +1,23 @@
 import { test, expect } from '@playwright/test';
 import { LoginAPI, LoginResponse } from '../../pages/auth/login.api';
 
+//simple helper to add delay
+const wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+
 test.describe('Admin Login API', () => {
   let loginAPI: LoginAPI;
 
   test.beforeEach(async () => {
     loginAPI = new LoginAPI();
     await loginAPI.init();
+    
+    //global wait before each test
+    await wait (3000);
+
   });
 
   test.afterEach(async () => {
+  
     await loginAPI.dispose();
   });
 
@@ -19,6 +27,7 @@ test.describe('Admin Login API', () => {
       process.env.ADMIN_PASSWORD!
     );
 
+    //log the responses  for debugging
     const loginData = response.data?.login;
     expect(loginData).toBeDefined();
     if (!loginData) return; // Stop TS complaints
