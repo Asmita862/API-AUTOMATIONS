@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { LoginAPI, LoginResponse } from '../../pages/auth/login.api';
+import { LoginAPI, LoginResponse } from '../../../pages/auth/login.api';
 
 //simple helper to add delay
 const wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));

@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
-import { LoginAPI } from '../../pages/auth/login.api';
-import { RegistrationAPI } from '../../pages/auth/registration.api';
-import { DataGenerator } from '../../utils/dataGenerator';
+import { LoginAPI } from '../../../pages/auth/login.api';
+import { RegistrationAPI } from '../../../pages/auth/registration.api';
+import { DataGenerator } from '../../../utils/dataGenerator';
 import fs from 'fs';
 import path from 'path';
 
